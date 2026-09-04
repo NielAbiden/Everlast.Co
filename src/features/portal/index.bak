@@ -1,0 +1,33 @@
+"use strict";
+
+const config = require("./config");
+const services = require("./services");
+
+async function handleMemberAdd(client, member) {
+    if (!config.welcome.enabled) {
+        return;
+    }
+
+    await services.sendWelcome(
+        client,
+        member
+    );
+}
+
+async function handleMemberRemove(client, member) {
+    if (!config.goodbye.enabled) {
+        return;
+    }
+
+    await services.sendGoodbye(
+        client,
+        member
+    );
+}
+
+module.exports = {
+    ...config,
+    services,
+    handleMemberAdd,
+    handleMemberRemove
+};

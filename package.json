@@ -1,0 +1,17 @@
+{
+  "name": "everlast",
+  "version": "1.0.0",
+  "description": "Everlast.Co",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^17.4.2"
+  }
+}

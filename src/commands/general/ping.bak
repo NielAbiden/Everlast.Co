@@ -1,0 +1,17 @@
+"use strict";
+
+const {
+    SlashCommandBuilder
+} = require("discord.js");
+
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName("ping")
+        .setDescription("Cek apakah Everlast aktif."),
+
+    async execute(interaction) {
+        await interaction.reply({
+            content: "🏓 Pong!"
+        });
+    }
+};

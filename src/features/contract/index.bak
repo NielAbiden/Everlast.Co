@@ -1,0 +1,32 @@
+"use strict";
+
+const config =
+    require("./config");
+
+const services =
+    require("./services");
+
+async function createContract(
+    interaction,
+    targetUser
+) {
+    await services.sendContractDM(
+        targetUser,
+        interaction.user
+    );
+}
+
+async function handleInteraction(
+    interaction
+) {
+    return services.handleInteraction(
+        interaction
+    );
+}
+
+module.exports = {
+    ...config,
+    services,
+    createContract,
+    handleInteraction
+};
