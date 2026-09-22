@@ -18,5 +18,4 @@ Discord bot built with Node.js and discord.js.
 Clone repository:
 
 ```bash
-git clone https://github.com/USERNAME/REPOSITORY.git
-cd REPOSITORY
+git clone https://github.com/NielAbiden/Everlast.Co.git
